@@ -9,5 +9,12 @@ defmodule RNATranscription do
   """
   @spec to_rna([char]) :: [char]
   def to_rna(dna) do
+  	Enum.map(dna, &transcribe/1)
   end
+
+  def transcribe(?A), do: ?U
+  def transcribe(?C), do: ?G
+  def transcribe(?T), do: ?A
+  def transcribe(?G), do: ?C
+
 end
