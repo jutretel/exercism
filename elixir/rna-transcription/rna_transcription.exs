@@ -12,9 +12,9 @@ defmodule RNATranscription do
   	Enum.map(dna, &transcribe/1)
   end
 
-  def transcribe(?A), do: ?U
-  def transcribe(?C), do: ?G
-  def transcribe(?T), do: ?A
-  def transcribe(?G), do: ?C
+  defp transcribe(?A), do: ?U
+  defp transcribe(?C), do: ?G
+  defp transcribe(?T), do: ?A
+  defp transcribe(?G), do: ?C
 
 end
