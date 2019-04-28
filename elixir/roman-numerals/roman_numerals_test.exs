@@ -3,7 +3,7 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start()
-ExUnit.configure(exclude: :pending, trace: true)
+# ExUnit.configure(exclude: :pending, trace: true)
 
 defmodule RomanTest do
   use ExUnit.Case
@@ -88,7 +88,7 @@ defmodule RomanTest do
     assert Roman.numerals(911) == "CMXI"
   end
 
-  @tag :pending
+  # @tag :pending
   test "1024" do
     assert Roman.numerals(1024) == "MXXIV"
   end
